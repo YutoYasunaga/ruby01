@@ -20,8 +20,8 @@ end
 day = day + (the_last_day.day - now.day)
 
 hour = day * hour_of_day + (hour_of_day - now.hour)
-minute = hour + min_sec_of_hour + (min_sec_of_hour - now.min)
-second = minute + min_sec_of_hour + (min_sec_of_hour - now.sec)
+minute = hour * min_sec_of_hour + (min_sec_of_hour - now.min)
+second = minute * min_sec_of_hour + (min_sec_of_hour - now.sec)
 
 puts "今年は後　#{month}月　です。"
 puts "今年は後　#{day}日　です。"
